@@ -1,33 +1,24 @@
-public class Rectangle {
-    private double width;
-    private double height;
+public class rectangle {
+    double width;
+    double height;
 
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
+    public rectangle(double a, double b) { // конструктор, проверка на корректность даных
+        if (a <= 0 || b <= 0) {
+            throw new IllegalArgumentException("Длина стороны прямоугольника не может быть отрицательной!");
+        }
+        this.width = a;
+        this.height = b;
     }
 
-    // Функция вычисления периметра
-    public double calculatePerimeter() {
-        return 2 * (width + height);
-    }
+    public double getPerimeter() {
+        return 2 * (a + b);
+    } // периметр
 
-    // Функция вычисления площади
-    public double calculateArea() {
-        return width * height;
-    }
+    public double getArea() {
+        return a * b;
+    } // площадь 
 
-    // Функция вычисления длины диагонали
-    public double calculateDiagonal() {
-        return Math.sqrt(width * width + height * height);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(5, 10);
-        System.out.println("Периметр прямоугольника: " + rectangle.calculatePerimeter());
-        System.out.println("Площадь прямоугольника: " + rectangle.calculateArea());
-        System.out.println("Длина диагонали прямоугольника: " + rectangle.calculateDiagonal());
-    }
+    public double getLenDiagonal() { // длина диагонали
+        return Math.sqrt(a * a + b * b);
+    } 
 }
