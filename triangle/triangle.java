@@ -1,7 +1,7 @@
 public class triangle {
     // Метод main для демонстрации
     public static void main(String[] args) {
-	
+	// стороны треугольника
         double a = 3, b = 4, c = 5;
 	// вычисление полупериметра 
         double s = (a + b + c) / 2;
