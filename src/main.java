@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args) {
+        // Создание объекта Scanner для чтения ввода с консоли.
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Введите название фигуры (rectangle, triangle, trapezoid):");
         String shape = scanner.nextLine().toLowerCase();
-
+        // Оператор if-else для обработки ввода пользователя.
         if (shape.equals("rectangle")) {
             System.out.println("Введите ширину и высоту прямоугольника:");
             double width = scanner.nextDouble();
@@ -37,9 +37,10 @@ public class main {
             System.out.println("Площадь: " + trap.getArea());
             System.out.println("Длина средней линии: " + trap.getLenMidLine());
         } else {
+            // Вывод сообщения в случае нераспознанной фигуры.
             System.out.println("Фигура не распознана.");
         }
-
+        // Закрытие объекта scanner.
         scanner.close();
     }
 }
