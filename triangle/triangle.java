@@ -5,7 +5,7 @@ public class triangle {
 
     public triangle(double a, double b, double c) { // конструктор, проверка на корректность даных
         if (a <= 0 || b <= 0 || c <= 0) {
-            throw new IllegalArgumentException("Сторона треугольника должна быть положительной");
+            throw new IllegalArgumentException("Стороны треугольника должны быть положительными");
         }
         this.side1 = a;
         this.side2 = b;
