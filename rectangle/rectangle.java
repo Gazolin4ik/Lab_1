@@ -4,21 +4,21 @@ public class rectangle {
 
     public rectangle(double a, double b) { // конструктор, проверка на корректность даных
         if (a <= 0 || b <= 0) {
-            throw new IllegalArgumentException("Длина стороны прямоугольника не может быть отрицательной!");
+            throw new IllegalArgumentException("Стороны прямоугольника должны быть положительными!");
         }
         this.width = a;
         this.height = b;
     }
 
     public double getPerimeter() {
-        return 2 * (a + b);
+        return 2 * (width + height);
     } // периметр
 
     public double getArea() {
-        return a * b;
+        return width * height;
     } // площадь 
 
     public double getLenDiagonal() { // длина диагонали
-        return Math.sqrt(a * a + b * b);
+        return Math.sqrt(width * width + height * height);
     } 
 }
