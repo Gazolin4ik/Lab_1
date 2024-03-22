@@ -22,7 +22,7 @@ public class trapezoid {
     } // периметр
 
     public double getArea() {
-        return ((side1 + side2) / 2) * height;;
+        return ((side1 + side2) / 2) * height;
     } // площадь трапеции
 
     public double getLenMidLine() { 

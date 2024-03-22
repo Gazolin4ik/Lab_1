@@ -17,11 +17,11 @@ public class triangle {
     } // периметр
 
     public double getArea() {
-	double s = getPerimeter() / 2
-	return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));;
+	double s = getPerimeter() / 2;
+	return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
     } // вычисление площади треугольника по формуле герона
 
-    public double getCheckIsosceles() { // проверка на равнобедренность
+    public boolean getCheckIsosceles() { // проверка на равнобедренность
         return side1 == side2 || side1 == side3 || side2 == side3;
     } //
 }
