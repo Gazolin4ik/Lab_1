@@ -1,15 +1,27 @@
 public class triangle {
-    // Метод main для демонстрации
-    public static void main(String[] args) {
-	// стороны треугольника
-        double a = 3, b = 4, c = 5;
-	// вычисление полупериметра 
-        double s = (a + b + c) / 2;
-	// вычисление периметра треугольника
-        System.out.println("Периметр треугольника: " + (a + b + c));
-	// вычисление площади треугольника 
-        System.out.println("Площадь треугольника: " + Math.sqrt(s * (s - a) * (s - b) * (s - c))); 
-	// проверка на равнобедренность
-        System.out.println("Треугольник равнобедренный: " + (a == b || a == c || b == c)); 
+    double side1;
+    double side2;
+    double side3;	
+
+    public triangle(double a, double b, double c) { // конструктор, проверка на корректность даных
+        if (a <= 0 || b <= 0 || c <= 0) {
+            throw new IllegalArgumentException("Сторона треугольника должна быть положительной");
+        }
+        this.side1 = a;
+        this.side2 = b;
+	this.side3 = c;
     }
-} 
+
+    public double getPerimeter() {
+        return side1 + side2 + side3;
+    } // периметр
+
+    public double getArea() {
+	double s = getPerimeter() / 2
+	return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));;
+    } // вычисление площади треугольника по формуле герона
+
+    public double getCheckIsosceles() { // проверка на равнобедренность
+        return side1 == side2 || side1 == side3 || side2 == side3;
+    } //
+}
