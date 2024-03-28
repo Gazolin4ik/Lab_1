@@ -4,12 +4,11 @@ public class triangle {
     double side3;	
 
     public triangle(double a, double b, double c) { // конструктор, проверка на корректность даных
-<<<<<<< HEAD:src/triangle/triangle.java
-        if ((a <= 0 || b <= 0 || c <= 0) || (((a + b) <= c) || ((a + c) <= b) || ((c + b) <= a))) {
-=======
-        if ((a <= 0 || b <= 0 || c <= 0) || ((a + b <= c) || (a + c <= b) || (b + c <= a))) {
->>>>>>> zinin_vyacheslav:triangle/triangle.java
+        if (a <= 0 || b <= 0 || c <= 0) {
             throw new IllegalArgumentException("Стороны треугольника должны быть положительными");
+        }
+        else if ((a + b) <= c || (a + c) <= b || (b + c) <= a) {
+            throw new IllegalArgumentException("Такого треугольника не существует");
         }
         this.side1 = a;
         this.side2 = b;
