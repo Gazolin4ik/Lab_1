@@ -7,9 +7,15 @@ public class triangle {
         if (a <= 0 || b <= 0 || c <= 0) {
             throw new IllegalArgumentException("Стороны треугольника должны быть положительными");
         }
+<<<<<<< HEAD:src/triangle/triangle.java
         else if ((a + b) <= c || (a + c) <= b || (b + c) <= a) {
             throw new IllegalArgumentException("Такого треугольника не существует");
         }
+=======
+	else if ((a + b) <= c || (a + c) <= b || (b + c <= a)) {
+	    throw new IllegalArgumentException("Такого треугольника не существует!");
+	}
+>>>>>>> zinin_vyacheslav:triangle/triangle.java
         this.side1 = a;
         this.side2 = b;
 	this.side3 = c;
