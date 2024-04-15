@@ -4,7 +4,7 @@ public class rectangle {
 
 	public rectangle(double a, double b) { // конструктор, проверка на корректность даных
 		if (a <= 0 || b <= 0) {
-			throw new IllegalArgumentException("Стороны прямоугольника должны быть положительными!");
+			throw new IllegalArgumentException("Стороны прямоугольника должны быть положительными");
 		}
 		this.width = a;
 		this.height = b;
