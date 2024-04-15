@@ -1,8 +1,24 @@
-public class rectangle { 
-	public static void main(String[] args) { 
-		double a = 10, b = 8;
-		System.out.println("Периметр:" + (2 * a + 2 * b));
-		System.out.println("Площадь:" + (a * b));
-		System.out.println("Диагональ:" + (Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))));
+public class rectangle {
+	double width;
+	double height;
+
+	public rectangle(double a, double b) { // конструктор, проверка на корректность даных
+		if (a <= 0 || b <= 0) {
+			throw new IllegalArgumentException("Стороны прямоугольника должны быть положительными!");
+		}
+		this.width = a;
+		this.height = b;
+	}
+
+	public double getPerimeter() {
+		return 2 * (width + height);
+	} // периметр
+
+	public double getArea() {
+		return width * height;
+	} // площадь
+
+	public double getLenDiagonal() { // длина диагонали
+		return Math.sqrt(width * width + height * height);
 	}
 }
