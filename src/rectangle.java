@@ -15,6 +15,6 @@ public class rectangle {
         return width * height;
     } // площадь
     public double getLenDiagonal() { // длина диагонали
-        return Math.sqrt(width * width + height * height);
+        return Math.sqrt(width * width + height * height);// здесь был олег
     }
 }
